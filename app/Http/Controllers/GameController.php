@@ -89,14 +89,17 @@ class GameController extends Controller
 	}
 
 	/**
-	 * Remove the specified resource from storage.
+	 * Supprime un jeu de la BDD.
 	 *
-	 * @param  int  $id
-	 * @return Response
+	 * @param  int  $id : L'id du jeu a supprimer de la BDD
+	 * @return Response : redirection vers la page precedente.
 	 */
 	public function destroy($id)
 	{
-		//
+    $game = $this->gameRepository->getById($id);
+    $this->gameRepository->destroy($id);
+
+		return redirect()->back()->withOk("Le jeu " . $game->name . " a été supprimé.");
 	}
 
 }
