@@ -1,6 +1,6 @@
-@extends('template')
+@extends('layouts.app')
 
-@section('contenu')
+@section('content')
     <div class="col-lg-offset-4 col-lg-4 col-sm-offset-3 col-sm-6">
     	<br>
 		<div class="panel panel-primary">

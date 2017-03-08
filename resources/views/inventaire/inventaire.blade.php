@@ -1,6 +1,6 @@
-@extends('template')
+@extends('layouts.app')
 
-@section('contenu')
+@section('content')
     <br>
     <div class="col-sm-offset-4 col-sm-4">
     	@if(session()->has('ok'))

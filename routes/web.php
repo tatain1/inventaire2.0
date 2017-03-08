@@ -10,12 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// Route native du framework
 Route::get('/', function () { return view('welcome'); });
 
 // Route pour l'inventaire
 Route::resource('game', 'GameController');
 
+// Routes pour l'authentification
 Auth::routes();
-
 Route::get('/home', 'HomeController@index');
