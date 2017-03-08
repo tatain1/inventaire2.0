@@ -79,7 +79,10 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                  Inventaire Retro Gaming by Tatain
+                </div>
+                <div class="links">
+                  Une application web developpée sous Laravel
                 </div>
 
                 <div class="links">

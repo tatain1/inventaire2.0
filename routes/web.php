@@ -13,8 +13,9 @@
 
 Route::get('/', function () { return view('welcome'); });
 
-// Test de route pour "user"
-Route::resource('user', 'UserController');
-
 // Route pour l'inventaire
 Route::resource('game', 'GameController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
