@@ -13,6 +13,7 @@
 			<table class="table">
 				<thead>
 					<tr>
+						<th>#</th>
 						<th>Nom</th>
             <th>Plateforme</th>
 						<th></th>
@@ -23,6 +24,7 @@
 				<tbody>
 					@foreach ($games as $game)
 						<tr>
+							<td>{!! $game->id !!}</td>
 							<td class="text-primary"><strong>{!! $game->name !!}</strong></td>
               <td>{!! $game->console !!}</td>
 							<td>{!! link_to_route('game.show', 'Voir', [$game->id], ['class' => 'btn btn-success btn-block']) !!}</td>
@@ -34,7 +36,7 @@
 							</td>
 						</tr>
 					@endforeach
-        </tbody>
+	  			</tbody>
 			</table>
 		</div>
 		{!! link_to_route('game.create', 'Ajouter un jeu', [], ['class' => 'btn btn-info pull-right']) !!}

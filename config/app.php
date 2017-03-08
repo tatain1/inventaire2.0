@@ -179,8 +179,6 @@ return [
 
         Collective\Html\HtmlServiceProvider::class,
 
-        Bestmomo\Scafold\ScafoldServiceProvider::class,
-
     ],
 
     /*
