@@ -13,18 +13,17 @@
 			<table class="table">
 				<thead>
 					<tr>
-						<th>#</th>
 						<th>Nom</th>
             <th>Plateforme</th>
 						<th></th>
 						<th></th>
 						<th></th>
+            <th>Id proprio</th>
 					</tr>
 				</thead>
 				<tbody>
 					@foreach ($games as $game)
 						<tr>
-							<td>{!! $game->id !!}</td>
 							<td class="text-primary"><strong>{!! $game->name !!}</strong></td>
               <td>{!! $game->console !!}</td>
 							<td>{!! link_to_route('game.show', 'Voir', [$game->id], ['class' => 'btn btn-success btn-block']) !!}</td>
@@ -34,6 +33,7 @@
 									{!! Form::submit('Supprimer', ['class' => 'btn btn-danger btn-block', 'onclick' => 'return confirm(\'Vraiment supprimer ce jeu ?\')']) !!}
 								{!! Form::close() !!}
 							</td>
+              <td>{!! $game->id_proprio !!}</td>
 						</tr>
 					@endforeach
 	  			</tbody>

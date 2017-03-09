@@ -4,6 +4,8 @@ namespace App\Repositories;
 
 use App\Game;
 
+use Illuminate\Support\Facades\Auth;
+
 class GameRepository
 {
 
@@ -23,6 +25,7 @@ class GameRepository
     $game->notice = isset($inputs['notice']);
     // Espace a remplir apres l'ajout des autres inputs.
     $game->note = $inputs['note'];
+    $game->id_proprio = Auth::id();
 
 		$game->save();
 	}
