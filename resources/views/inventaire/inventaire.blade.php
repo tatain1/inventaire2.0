@@ -33,7 +33,7 @@
 									{!! Form::submit('Supprimer', ['class' => 'btn btn-danger btn-block', 'onclick' => 'return confirm(\'Vraiment supprimer ce jeu ?\')']) !!}
 								{!! Form::close() !!}
 							</td>
-              <td>{!! $game->id_proprio !!}</td>
+              <td>{!! $game->user_id !!}</td>
 						</tr>
 					@endforeach
 	  			</tbody>

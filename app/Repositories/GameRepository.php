@@ -25,7 +25,7 @@ class GameRepository
     $game->notice = isset($inputs['notice']);
     // Espace a remplir apres l'ajout des autres inputs.
     $game->note = $inputs['note'];
-    $game->id_proprio = Auth::id();
+    $game->user_id = Auth::id();
 
 		$game->save();
 	}

@@ -72,6 +72,9 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
+                                    <li>
+                                      <a href="{{ url('/game') }}">Inventaire</a>
+                                    </li>
                                 </ul>
                             </li>
                         @endif

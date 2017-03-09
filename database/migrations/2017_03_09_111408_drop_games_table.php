@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddProprioToGames extends Migration
+class DropGamesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,7 @@ class AddProprioToGames extends Migration
      */
     public function up()
     {
-      Schema::table('games', function($table) {
-            $table->integer('user_id');
-    });
+        Schema::drop('games');
     }
 
     /**
@@ -25,8 +23,6 @@ class AddProprioToGames extends Migration
      */
     public function down()
     {
-      Schema::table('games', function($table) {
-          $table->dropColumn('user_id');
-  });
+        //
     }
 }
