@@ -14,7 +14,7 @@
 Route::get('/', function () { return view('welcome'); });
 
 // Route pour l'inventaire
-Route::resource('game', 'GameController');
+Route::resource('/game', 'GameController');
 
 // Routes pour l'authentification
 Auth::routes();

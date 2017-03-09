@@ -73,8 +73,8 @@
                     @if (Auth::check())
                         <a href="{{ url('/game') }}">Inventaire</a>
                     @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
+                        <a href="{{ url('/login') }}">Se connecter</a>
+                        <a href="{{ url('/register') }}">S'enregistrer</a>
                     @endif
                 </div>
             @endif
