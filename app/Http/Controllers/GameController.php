@@ -30,9 +30,12 @@ class GameController extends Controller
 	 */
 	public function index()
 	{
-    $myID = Auth::id();;
+    // Reccupere l'id de l'utlisateur connecté
+    $myID = Auth::id();
+    // Prepare la pagination et les liens pour la vue
     $pages = $this->gameRepository->getPaginate($this->nbrPerPage);
     $links = $pages->setPath('')->render();
+    // Recupere la liste des jeux de l'utlisateur
     $games = User::find($myID)->games;
 
     return view('inventaire/inventaire', compact('games', 'links'));
