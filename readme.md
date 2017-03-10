@@ -11,3 +11,6 @@ Nul.
 ## Projets
 
 ## Versions
+
+## Code secret de la mort
+	a9e916b3bc174f1890678eb32c52a23f

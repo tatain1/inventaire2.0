@@ -32,7 +32,9 @@ class GameRepository
 
 	public function getPaginate($n)
 	{
-		return $this->game->paginate($n);
+		return $this->game->with('user')
+        ->orderBy('created_at', 'desc')
+        ->paginate($n);
 	}
 
 	public function store(Array $inputs)

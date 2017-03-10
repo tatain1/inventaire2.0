@@ -15,7 +15,7 @@ class Game extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'console', 'user_id',
     ];
 
     /**
@@ -24,6 +24,11 @@ class Game extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(\App\User::class);
+    }
 }

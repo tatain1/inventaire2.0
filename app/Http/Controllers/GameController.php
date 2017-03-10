@@ -5,7 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Requests\GameCreateRequest;
 use App\Http\Requests\GameUpdateRequest;
 
+use Illuminate\Support\Facades\Auth;
+
 use App\Repositories\GameRepository;
+use App\Game;
+use App\User;
 
 use Illuminate\Http\Request;
 
@@ -26,8 +30,10 @@ class GameController extends Controller
 	 */
 	public function index()
 	{
-    $games = $this->gameRepository->getPaginate($this->nbrPerPage);
-    $links = $games->setPath('')->render();
+    $myID = Auth::id();;
+    $pages = $this->gameRepository->getPaginate($this->nbrPerPage);
+    $links = $pages->setPath('')->render();
+    $games = User::find($myID)->games;
 
     return view('inventaire/inventaire', compact('games', 'links'));
 	}

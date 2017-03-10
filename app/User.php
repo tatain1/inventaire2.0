@@ -1,7 +1,9 @@
 <?php
 namespace App;
+
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -21,4 +23,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    // On déclare ici qu’un utilisateur a plusieurs (hasMany) jeux (games).
+    // On a ainsi une méthode pratique pour récupérer les jeuxs d’un utilisateur.
+    public function games()
+    {
+        return $this->hasMany(\App\Game::class);
+    }
 }
