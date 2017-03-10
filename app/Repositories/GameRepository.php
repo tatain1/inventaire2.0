@@ -21,7 +21,6 @@ class GameRepository
 		$game->name = $inputs['name'];
 		$game->console = $inputs['console'];
 		$game->boite = isset($inputs['boite']);
-    $game->jaquette = isset($inputs['jaquette']);
     $game->notice = isset($inputs['notice']);
     // Espace a remplir apres l'ajout des autres inputs.
     $game->note = $inputs['note'];

@@ -48,7 +48,7 @@ class GameController extends Controller
 	 */
 	public function create()
 	{
-    return view('inventaire/create');
+    return view('inventaire.create');
 	}
 
 	/**

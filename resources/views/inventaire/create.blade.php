@@ -27,11 +27,7 @@
 								{!! Form::checkbox('boite', 1, null) !!} Boite
 							</label>
 						</div>
-            <div class="checkbox">
-							<label>
-								{!! Form::checkbox('jaquette', 1, null) !!} Jaquette
-							</label>
-						</div>
+            
             <div class="checkbox">
 							<label>
 								{!! Form::checkbox('notice', 1, null) !!} Notice
