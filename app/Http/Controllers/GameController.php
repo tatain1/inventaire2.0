@@ -21,6 +21,12 @@ class GameController extends Controller
 
   public function __construct(GameRepository $gameRepository)
   {
+    // Il faut etre connécté pour acceder aux fonction de la class GameController
+    $this->middleware('auth');
+    // Seul ceux qui ont un user status = admin peuvent utiiser la fonction destroy
+    // ne fonctionne pas pour l'instant
+    $this->middleware('admin')->only('destroy');
+
 		$this->gameRepository = $gameRepository;
 	}
     /**
