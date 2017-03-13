@@ -18,6 +18,6 @@ class Admin
             return $next($request);
         }
 
-        return redirect('game');
+        return redirect('game')->withOk("Action impossible (vous devez être admin)");
     }
 }
