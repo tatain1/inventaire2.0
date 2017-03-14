@@ -79,7 +79,14 @@ class GameController extends Controller
 	{
     $game = $this->gameRepository->getById($id);
 
-    return view('inventaire/show',  compact('game'));
+    $proprio = Game::find($id)->user['id'];
+    $myID = Auth::id();
+
+    if ($proprio == $myID) {
+      return view('inventaire/show',  compact('game'));
+    } else {
+      return redirect('game')->withOk("Vous ne pouvez pas voir la fiche de ce jeu.");
+    }
 	}
 
 	/**
@@ -111,10 +118,17 @@ class GameController extends Controller
 	 */
 	public function destroy($id)
 	{
-    $game = $this->gameRepository->getById($id);
-    $this->gameRepository->destroy($id);
+    $proprio = Game::find($id)->user['id'];
+    $myID = Auth::id();
 
-		return redirect()->back()->withOk("Le jeu " . $game->name . " a été supprimé.");
+    if ($proprio == $myID) {
+      $game = $this->gameRepository->getById($id);
+      $this->gameRepository->destroy($id);
+
+      return redirect()->back()->withOk("Le jeu " . $game->name . " a été supprimé.");
+    } else {
+      return redirect()->back()->withOk("Ce jeu ne vous appartient pas et vous ne pouvez pas le supprimer.");
+    }
 	}
 
 }
