@@ -12,8 +12,14 @@
 					  	{!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Nom']) !!}
 					  	{!! $errors->first('name', '<small class="help-block">:message</small>') !!}
 					</div>
+          <!-- A FAIRE : placeholder / modifier couleur -->
+          <!-- A FAIRE : formulaire dynamique en JS -->
 					<div class="form-group {!! $errors->has('console') ? 'has-error' : '' !!}">
-					  	{!! Form::text('console', null, ['class' => 'form-control', 'placeholder' => 'Plate-forme']) !!}
+              {!! Form::select('console', array(
+                '' => '----Console----',
+                'Nes' => 'NES',
+                'Snes' => 'SNES'
+              ), null, ['class' => 'form-control']) !!}
 					  	{!! $errors->first('console', '<small class="help-block">:message</small>') !!}
 					</div>
           <div class="form-group {!! $errors->has('note') ? 'has-error' : '' !!}">
@@ -27,14 +33,14 @@
 								{!! Form::checkbox('boite', 1, null) !!} Boite
 							</label>
 						</div>
-            
+
             <div class="checkbox">
 							<label>
 								{!! Form::checkbox('notice', 1, null) !!} Notice
 							</label>
 						</div>
 					</div>
-					{!! Form::submit('Envoyer', ['class' => 'btn btn-primary pull-right']) !!}
+					{!! Form::submit('Enregistrer', ['class' => 'btn btn-primary pull-right']) !!}
 					{!! Form::close() !!}
 				</div>
 			</div>

@@ -6,9 +6,16 @@ du framework PHP Laravel.
 
 ## Etat d'avancement
 
-Nul.
+Balbutiements
 
 ## Projets
+
+- Ajout du support des differentes plateformes.
+- Amelioration dans l'affichage des formulaires d'ajout de jeu.
+- Prise en charge des tags.
+- Filtres de recherches par nom, plateformes, tags, etc...
+
+- Visionnage  des collections des autres utilisateur sur autorisation.
 
 ## Versions
 

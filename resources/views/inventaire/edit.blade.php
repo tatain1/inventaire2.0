@@ -12,9 +12,15 @@
 					  	{!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Nom']) !!}
 					  	{!! $errors->first('name', '<small class="help-block">:message</small>') !!}
 					</div>
+          <!-- A FAIRE : placeholder / modifier couleur -->
+          <!-- A FAIRE : formulaire dynamique en JS -->
 					<div class="form-group {!! $errors->has('console') ? 'has-error' : '' !!}">
-					  	{!! Form::text('console', null, ['class' => 'form-control', 'placeholder' => 'Email']) !!}
-					  	{!! $errors->first('email', '<small class="help-block">:message</small>') !!}
+              {!! Form::select('console', array(
+                '' => '----Console----',
+                'Nes' => 'NES',
+                'Snes' => 'SNES'
+              ), null, ['class' => 'form-control']) !!}
+					  	{!! $errors->first('console', '<small class="help-block">:message</small>') !!}
 					</div>
           <div class="form-group {!! $errors->has('note') ? 'has-error' : '' !!}">
 					  	{!! Form::textarea('note', null, ['class' => 'form-control', 'placeholder' => 'Note']) !!}
