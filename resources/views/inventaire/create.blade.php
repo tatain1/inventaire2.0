@@ -7,7 +7,7 @@
 			<div class="panel-heading">Ajout d'un jeu dans la base de données</div>
 			<div class="panel-body">
 				<div class="col-sm-12">
-					{!! Form::open(['url' => 'game', 'method' => 'post', 'class' => 'form-horizontal panel']) !!}
+					{!! Form::open(['url' => 'game', 'method' => 'post', 'class' => 'form-horizontal panel', 'id' => 'ajout']) !!}
 					<div class="form-group {!! $errors->has('name') ? 'has-error' : '' !!}">
 					  	{!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Nom']) !!}
 					  	{!! $errors->first('name', '<small class="help-block">:message</small>') !!}
@@ -17,9 +17,10 @@
 					<div class="form-group {!! $errors->has('console') ? 'has-error' : '' !!}">
               {!! Form::select('console', array(
                 '' => '----Console----',
-                'Nes' => 'NES',
-                'Snes' => 'SNES'
-              ), null, ['class' => 'form-control']) !!}
+                'NES' => 'NES',
+                'SNES' => 'SNES',
+                'GAMECUBE' => 'GAMECUBE'
+              ), null, ['class' => 'form-control', 'id' => 'console']) !!}
 					  	{!! $errors->first('console', '<small class="help-block">:message</small>') !!}
 					</div>
           <div class="form-group {!! $errors->has('note') ? 'has-error' : '' !!}">
@@ -28,13 +29,13 @@
 					</div>
 
 					<div class="form-group">
-						<div class="checkbox">
+						<div id="boite_div" class="checkbox hide">
 							<label>
-								{!! Form::checkbox('boite', 1, null) !!} Boite
+								{!! Form::checkbox('boite', 1, null, ['id' => 'boite']) !!} Boite
 							</label>
 						</div>
 
-            <div class="checkbox">
+            <div id="notice_div" class="checkbox hide">
 							<label>
 								{!! Form::checkbox('notice', 1, null) !!} Notice
 							</label>

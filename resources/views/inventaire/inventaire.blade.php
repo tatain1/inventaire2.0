@@ -23,7 +23,7 @@
 				<tbody>
 					@foreach ($games as $game)
 						<tr>
-							<td class="text-primary"><strong>{!! $game->name !!}</strong></td>
+							<td class="text-primary"><strong>{!! link_to_route('game.show', $game->name, [$game->id]) !!}</strong></td>
               <td>{!! $game->console !!}</td>
 							<td>{!! link_to_route('game.show', 'Voir', [$game->id], ['class' => 'btn btn-success btn-block']) !!}</td>
 							<td>{!! link_to_route('game.edit', 'Modifier', [$game->id], ['class' => 'btn btn-warning btn-block']) !!}</td>

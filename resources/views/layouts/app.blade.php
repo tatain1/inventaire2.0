@@ -90,7 +90,10 @@
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
     crossorigin="anonymous"></script>
-    <!-- Mon JS -->
+    <!-- Mon JS general -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <!-- Mon JS de formulaire -->
+    <script src="{{ asset('js/form.js') }}"></script>
+
 </body>
 </html>
