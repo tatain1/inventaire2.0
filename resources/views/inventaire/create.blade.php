@@ -37,9 +37,28 @@
 
             <div id="notice_div" class="checkbox hide">
 							<label>
-								{!! Form::checkbox('notice', 1, null) !!} Notice
+								{!! Form::checkbox('notice', 1, null, ['id' => 'notice']) !!} Notice
 							</label>
 						</div>
+
+            <div id="jaquette_div" class="checkbox hide">
+							<label>
+								{!! Form::checkbox('jaquette', 1, null, ['id' => 'jaquette']) !!} Jaquette
+							</label>
+						</div>
+
+            <div id="cale_div" class="checkbox hide">
+							<label>
+								{!! Form::checkbox('cale', 1, null, ['id' => 'cale']) !!} Cale
+							</label>
+						</div>
+
+            <div id="fourreau_div" class="checkbox hide">
+							<label>
+								{!! Form::checkbox('fourreau', 1, null, ['id' => 'fourreau']) !!} Fourreau
+							</label>
+						</div>
+
 					</div>
 					{!! Form::submit('Enregistrer', ['class' => 'btn btn-primary pull-right']) !!}
 					{!! Form::close() !!}
