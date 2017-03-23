@@ -19,5 +19,8 @@ Balbutiements
 
 ## Versions
 
+- 0.0.2 : 23/03/2017 -> Ajout/suppression possible pour les supports suivant : NES, SNES, N64, GAMECUBE, WII
+- 0.0.1 : Mise en place.
+
 ## Code secret de la mort
 	a9e916b3bc174f1890678eb32c52a23f
