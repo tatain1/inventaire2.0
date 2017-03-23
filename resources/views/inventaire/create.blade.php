@@ -19,9 +19,10 @@
                 '' => '----Console----',
                 'NES' => 'NES',
                 'SNES' => 'SNES',
-                'N64' => 'N64',
-                'GAMECUBE' => 'GAMECUBE',
-                'WII' => 'WII'
+                'N64' => 'Nintendo 64',
+                'GAMECUBE' => 'GameCube',
+                'WII' => 'Wii',
+                'WII-U' => 'Wii U'
               ), null, ['class' => 'form-control', 'id' => 'console']) !!}
 					  	{!! $errors->first('console', '<small class="help-block">:message</small>') !!}
 					</div>

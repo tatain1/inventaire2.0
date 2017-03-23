@@ -47,6 +47,10 @@ $('#console').change(function(e) {
     addElement('boite', 'notice', 'jaquette');
     removeElement('cale', 'fourreau');
   }
+  else if (plateforme === 'WII-U') {
+    addElement('boite', 'notice', 'jaquette');
+    removeElement('cale', 'fourreau');
+  }
   else {
     removeElement('jaquette', 'cale', 'boite', 'notice', 'fourreau');
   }
