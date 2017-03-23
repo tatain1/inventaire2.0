@@ -18,10 +18,14 @@
         @if($game->notice == 1)
           <img src="{{URL::asset('/image/notice.png')}}" alt="Notice" title="Notice presente" height="30" width="30">
 				@endif
+        @if($game->cale == 1)
+          Cale
+        @endif
+        @if($game->fourreau == 1)
+          Fourreau
+        @endif
 			</div>
 		</div>
-		<a href="javascript:history.back()" class="btn btn-primary">
-			<span class="glyphicon glyphicon-circle-arrow-left"></span> Retour
-		</a>
+		<a href="javascript:history.back()" class="btn btn-primary">Retour</a>
 	</div>
 @stop
