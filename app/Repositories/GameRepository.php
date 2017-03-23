@@ -22,9 +22,9 @@ class GameRepository
 		$game->console = $inputs['console'];
 		$game->boite = isset($inputs['boite']);
     $game->notice = isset($inputs['notice']);
-    $game->notice = isset($inputs['jaquette']);
-    $game->notice = isset($inputs['cale']);
-    $game->notice = isset($inputs['fourreau']);
+    $game->jaquette = isset($inputs['jaquette']);
+    $game->cale = isset($inputs['cale']);
+    $game->fourreau = isset($inputs['fourreau']);
     $game->note = $inputs['note'];
     $game->user_id = Auth::id();
 
