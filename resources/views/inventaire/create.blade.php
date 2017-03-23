@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<!-- A FAIRE : nouveau layout qui prend en charge tous sauf le form open -->
 @section('content')
     <div class="col-sm-offset-4 col-sm-4">
     	<br>
@@ -67,8 +67,6 @@
 				</div>
 			</div>
 		</div>
-		<a href="javascript:history.back()" class="btn btn-primary">
-			<span class="glyphicon glyphicon-circle-arrow-left"></span> Retour
-		</a>
+		<a href="javascript:history.back()" class="btn btn-primary">Retour</a>
 	</div>
 @stop
