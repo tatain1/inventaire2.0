@@ -26,5 +26,10 @@ Balbutiements
 
 0.0.1 : Mise en place.
 
+## Bug report / choses a faire
+
+- Dans le modif, afficher les checkboxs par defaut
+- Dans voir fiche, remplacer les textes jaquette, cale et fourreau par icone
+
 ## Code secret de la mort
 	a9e916b3bc174f1890678eb32c52a23f
