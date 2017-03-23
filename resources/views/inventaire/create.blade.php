@@ -30,34 +30,34 @@
 					  	{!! $errors->first('note', '<small class="help-block">:message</small>') !!}
 					</div>
 
-					<div class="form-group">
+					<div class="form-group cases">
 						<div id="boite_div" class="checkbox hide">
 							<label>
-								{!! Form::checkbox('boite', 1, null, ['id' => 'boite']) !!} Boite
+								{!! Form::checkbox('boite', 1, null, ['id' => 'boite', 'class' => 'case']) !!} Boite
 							</label>
 						</div>
 
             <div id="notice_div" class="checkbox hide">
 							<label>
-								{!! Form::checkbox('notice', 1, null, ['id' => 'notice']) !!} Notice
+								{!! Form::checkbox('notice', 1, null, ['id' => 'notice', 'class' => 'case']) !!} Notice
 							</label>
 						</div>
 
             <div id="jaquette_div" class="checkbox hide">
 							<label>
-								{!! Form::checkbox('jaquette', 1, null, ['id' => 'jaquette']) !!} Jaquette
+								{!! Form::checkbox('jaquette', 1, null, ['id' => 'jaquette', 'class' => 'case']) !!} Jaquette
 							</label>
 						</div>
 
             <div id="cale_div" class="checkbox hide">
 							<label>
-								{!! Form::checkbox('cale', 1, null, ['id' => 'cale']) !!} Cale
+								{!! Form::checkbox('cale', 1, null, ['id' => 'cale', 'class' => 'case']) !!} Cale
 							</label>
 						</div>
 
             <div id="fourreau_div" class="checkbox hide">
 							<label>
-								{!! Form::checkbox('fourreau', 1, null, ['id' => 'fourreau']) !!} Fourreau
+								{!! Form::checkbox('fourreau', 1, null, ['id' => 'fourreau', 'class' => 'case']) !!} Fourreau
 							</label>
 						</div>
 

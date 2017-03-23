@@ -18,42 +18,36 @@ function removeElement(/* any number of arguments */) {
   });
 };
 
-$('#ajout').change(function(e) {
+// Fonction qui affiche ou non les bonnes checkbox en fonction de la valeur
+// du Select
+$('#console').change(function(e) {
   e.preventDefault();
+  // Reinitialise les checkbox deja coché en cas de changement de valeur.
+  var cases = $(".cases").find(':checkbox').prop("checked", false);
 
   var plateforme = $( "#console" ).val();
 
   if (plateforme === 'NES') {
-
     addElement('boite', 'notice', 'cale', 'fourreau');
     removeElement('jaquette');
-
-  } else if (plateforme === 'SNES') {
-
+  }
+  else if (plateforme === 'SNES') {
     addElement('boite', 'notice', 'cale', 'fourreau');
     removeElement('jaquette');
-
-  } else if (plateforme === 'N64') {
-
+  }
+  else if (plateforme === 'N64') {
     addElement('boite', 'notice', 'cale', 'fourreau');
     removeElement('jaquette');
-
-  } else if (plateforme === 'GAMECUBE') {
-
+  }
+  else if (plateforme === 'GAMECUBE') {
     addElement('boite', 'notice', 'jaquette');
     removeElement('cale', 'fourreau');
-
-  } else if (plateforme === 'WII') {
-
+  }
+  else if (plateforme === 'WII') {
     addElement('boite', 'notice', 'jaquette');
     removeElement('cale', 'fourreau');
-
-  } else {
-
+  }
+  else {
     removeElement('jaquette', 'cale', 'boite', 'notice', 'fourreau');
-
   }
 });
-
-// A FAIRE : une fonction "affiche(nomDeLElement)" et une fonction "cache(nomDeLElement)" ?
-// fonction resetCheckbox();
