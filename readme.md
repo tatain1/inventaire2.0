@@ -10,10 +10,12 @@ Balbutiements
 
 ## Projets
 
-- Ajout du support des differentes plateformes.
+- Ajout du support des differentes plateformes (jeux).
+- Ajout du support des differentes plateformes (console).
 - Amelioration dans l'affichage des formulaires d'ajout de jeu.
 - Prise en charge des tags.
 - Filtres de recherches par nom, plateformes, tags, etc...
+- Possiblité d'upload une photo de son jeu
 
 - Visionnage  des collections des autres utilisateur sur autorisation.
 
