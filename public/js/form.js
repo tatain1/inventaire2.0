@@ -1,3 +1,23 @@
+function addElement(/* any number of arguments */) {
+  var args = Array.prototype.slice.call(arguments);
+  // or [].slice.call(arguments)
+
+  args.forEach(function(arg) {
+    $('#'+ arg +'_div').removeClass("hide");
+    $('#'+ arg +'_div').show();
+  });
+};
+
+function removeElement(/* any number of arguments */) {
+  var args = Array.prototype.slice.call(arguments);
+  // or [].slice.call(arguments)
+
+  args.forEach(function(arg) {
+    $('#'+ arg +'_div').hide();
+    $('#'+ arg +'').prop('checked', false);
+  });
+};
+
 $('#ajout').change(function(e) {
   e.preventDefault();
 
@@ -5,36 +25,32 @@ $('#ajout').change(function(e) {
 
   if (plateforme === 'NES') {
 
-    $('#boite_div').removeClass("hide");
-    $('#boite_div').show();
-    $('#notice_div').removeClass("hide");
-    $('#notice_div').show();
-    $('#cale_div').removeClass("hide");
-    $('#cale_div').show();
-    $('#fourreau_div').removeClass("hide");
-    $('#fourreau_div').show();
+    addElement('boite', 'notice', 'cale', 'fourreau');
+    removeElement('jaquette');
 
-    $('#jaquette_div').hide();
-    $('#jaquette').prop('checked', false);
+  } else if (plateforme === 'SNES') {
+
+    addElement('boite', 'notice', 'cale', 'fourreau');
+    removeElement('jaquette');
+
+  } else if (plateforme === 'N64') {
+
+    addElement('boite', 'notice', 'cale', 'fourreau');
+    removeElement('jaquette');
 
   } else if (plateforme === 'GAMECUBE') {
 
-    $('#boite_div').removeClass("hide");
-    $('#boite_div').show();
-    $('#notice_div').removeClass("hide");
-    $('#notice_div').show();
-    $('#jaquette_div').removeClass("hide");
-    $('#jaquette_div').show();
+    addElement('boite', 'notice', 'jaquette');
+    removeElement('cale', 'fourreau');
 
-    $('#cale_div').hide();
-    $('#cale').prop('checked', false);
-    $('#fourreau_div').hide();
-    $('#fourreau').prop('checked', false);
+  } else if (plateforme === 'WII') {
+
+    addElement('boite', 'notice', 'jaquette');
+    removeElement('cale', 'fourreau');
 
   } else {
 
-    $('#boite_div').hide();
-    $('#notice_div').hide();
+    removeElement('jaquette', 'cale', 'boite', 'notice', 'fourreau');
 
   }
 });
