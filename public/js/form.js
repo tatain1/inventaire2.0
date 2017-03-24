@@ -32,12 +32,12 @@ $('#console').change(function(e) {
     removeElement('jaquette');
   }
   else if (plateforme === 'SNES') {
-    addElement('boite', 'notice', 'cale', 'fourreau');
-    removeElement('jaquette');
+    addElement('boite', 'notice', 'cale');
+    removeElement('jaquette', 'fourreau');
   }
   else if (plateforme === 'N64') {
-    addElement('boite', 'notice', 'cale', 'fourreau');
-    removeElement('jaquette');
+    addElement('boite', 'notice', 'cale');
+    removeElement('jaquette', 'fourreau');
   }
   else if (plateforme === 'GAMECUBE') {
     addElement('boite', 'notice', 'jaquette');
