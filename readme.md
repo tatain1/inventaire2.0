@@ -21,6 +21,9 @@ Balbutiements
 
 ## Versions
 
+0.0.3 : 24/03/2017
+- Optimisations et corrections en tous genres.
+
 0.0.2 : 23/03/2017
 - Ajout/suppression possible pour les supports suivants : NES, SNES, N64, GAMECUBE, WII.
 - Prise en charge de la modification de jeux.

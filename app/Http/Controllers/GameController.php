@@ -17,7 +17,7 @@ class GameController extends Controller
 {
 
   protected $gameRepository;
-  protected $nbrPerPage = 15;
+  protected $nbrPerPage = 10;
 
   public function __construct(GameRepository $gameRepository)
   {
@@ -39,10 +39,11 @@ class GameController extends Controller
     // Reccupere l'id de l'utlisateur connecté
     $myID = Auth::id();
     // Prepare la pagination et les liens pour la vue
-    $pages = $this->gameRepository->getPaginate($this->nbrPerPage);
-    $links = $pages->setPath('')->render();
+    $links = $this->gameRepository->getPaginate($this->nbrPerPage)->setPath('')->render();
+
     // Recupere la liste des jeux de l'utlisateur
-    $games = User::find($myID)->games;
+    $games = $this->gameRepository->getPaginate($this->nbrPerPage)
+                                  ->where('user_id', $myID);
 
     return view('inventaire/inventaire', compact('games', 'links'));
 	}
