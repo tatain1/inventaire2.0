@@ -15,7 +15,8 @@ Balbutiements
 - Amelioration dans l'affichage des formulaires d'ajout de jeu.
 - Prise en charge des tags.
 - Filtres de recherches par nom, plateformes, tags, etc...
-- Possiblité d'upload une photo de son jeu
+- Possiblité d'upload une photo de son jeu.
+- Verifier lors de l'ajout d'un jeu en doublon si doublon reel ou erreur.
 
 - Visionnage  des collections des autres utilisateur sur autorisation.
 
