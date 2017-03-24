@@ -39,15 +39,35 @@ $('#console').change(function(e) {
     addElement('boite', 'notice', 'cale');
     removeElement('jaquette', 'fourreau');
   }
-  else if (plateforme === 'GAMECUBE') {
+  else if (plateforme === 'GameCube') {
     addElement('boite', 'notice', 'jaquette');
     removeElement('cale', 'fourreau');
   }
-  else if (plateforme === 'WII') {
+  else if (plateforme === 'Wii') {
     addElement('boite', 'notice', 'jaquette');
     removeElement('cale', 'fourreau');
   }
-  else if (plateforme === 'WII-U') {
+  else if (plateforme === 'Wii-U') {
+    addElement('boite', 'notice', 'jaquette');
+    removeElement('cale', 'fourreau');
+  }
+  else if (plateforme === 'MasterSystem') {
+    addElement('boite', 'notice', 'jaquette');
+    removeElement('cale', 'fourreau');
+  }
+  else if (plateforme === 'MegaDrive') {
+    addElement('boite', 'notice', 'jaquette');
+    removeElement('cale', 'fourreau');
+  }
+  else if (plateforme === 'GameGear') {
+    addElement('boite', 'notice', 'jaquette');
+    removeElement('cale', 'fourreau');
+  }
+  else if (plateforme === 'Saturn') {
+    addElement('boite', 'notice');
+    removeElement('cale', 'fourreau', 'jaquette');
+  }
+  else if (plateforme === 'DreamCast') {
     addElement('boite', 'notice', 'jaquette');
     removeElement('cale', 'fourreau');
   }

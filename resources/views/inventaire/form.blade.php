@@ -7,12 +7,30 @@
 <div class="form-group {!! $errors->has('console') ? 'has-error' : '' !!}">
     {!! Form::select('console', array(
       '' => '----Console----',
-      'NES' => 'NES',
-      'SNES' => 'SNES',
-      'N64' => 'Nintendo 64',
-      'GAMECUBE' => 'GameCube',
-      'WII' => 'Wii',
-      'WII-U' => 'Wii U'
+      'Nintendo' => array(
+        'NES' => 'NES',
+        'SNES' => 'SNES',
+        'N64' => 'Nintendo 64',
+        'GameCube' => 'GameCube',
+        'Wii' => 'Wii',
+        'Wii-U' => 'Wii-U'
+      ),
+      'Sega' => array(
+        'MasterSystem' => 'Master System',
+        'MegaDrive' => 'Mega Drive',
+        'GameGear' => 'Game Gear',
+        'Saturn' => 'Saturn',
+        'DreamCast' => 'DreamCast',
+      ),
+      'Sony' => array(
+
+      ),
+      'Microsoft' => array (
+
+      ),
+      'Autre(s) marque(s)' => array (
+
+      ),
     ), null, ['class' => 'form-control', 'id' => 'console']) !!}
     {!! $errors->first('console', '<small class="help-block">:message</small>') !!}
 </div>
