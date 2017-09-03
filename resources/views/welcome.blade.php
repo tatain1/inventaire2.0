@@ -74,7 +74,8 @@
                         <a href="{{ url('/game') }}">Inventaire</a>
                     @else
                         <a href="{{ url('/login') }}">Se connecter</a>
-                        <a href="{{ url('/register') }}">S'enregistrer</a>
+                        <!-- <a href="{{ url('/register') }}">S'enregistrer</a> -->
+                        <a href="#">S'enregistrer</a>
                     @endif
                 </div>
             @endif
