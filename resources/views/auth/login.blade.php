@@ -54,7 +54,9 @@
                                     Connexion
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                <!-- <a class="btn btn-link" href="{{ route('password.request') }}"> -->
+                                <a class="btn btn-link" href="#">
+
                                     Mot de passe oublié ?
                                 </a>
                             </div>

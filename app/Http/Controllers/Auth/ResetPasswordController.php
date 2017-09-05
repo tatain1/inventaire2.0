@@ -36,4 +36,12 @@ class ResetPasswordController extends Controller
     {
         $this->middleware('guest');
     }
+
+    //Show form to user where they can reset password
+    public function showResetForm($token = null)
+    {
+      return view('auth.passwords.reset')->with(
+      ['token' => $token]
+      );
+    }
 }

@@ -74,8 +74,8 @@
                         <a href="{{ url('/game') }}">Inventaire</a>
                     @else
                         <a href="{{ url('/login') }}">Se connecter</a>
-                        <!-- <a href="{{ url('/register') }}">S'enregistrer</a> -->
-                        <a href="#">S'enregistrer</a>
+                        <a href="{{ url('/register') }}">S'enregistrer</a>
+                        <!-- <a href="#">S'enregistrer</a> -->
                     @endif
                 </div>
             @endif
@@ -85,16 +85,12 @@
                   Inventaire Retro Gaming by Tatain
                 </div>
                 <div class="links">
-                  Une application web developpée sous Laravel
+                  Une application web de gestion de collection de jeux video.
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                <h1>Comment ça marche ?</h1>
+                <p>Si c'est votre premiere visite, commencez par vous enregistrer (en haut à droite !)</p>
+                
             </div>
         </div>
     </body>

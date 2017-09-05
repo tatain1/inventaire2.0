@@ -43,7 +43,8 @@ class GameController extends Controller
 
     // Recupere la liste des jeux de l'utlisateur
     $games = $this->gameRepository->getPaginate($this->nbrPerPage)
-                                  ->where('user_id', $myID);
+                                  ->where('user_id', $myID)
+                                  ->sortBy('name');
 
     return view('inventaire/inventaire', compact('games', 'links'));
 	}

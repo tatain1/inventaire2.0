@@ -2,19 +2,19 @@
 
 @section('content')
     <br>
-    <div class="col-sm-offset-4 col-sm-4">
+    <div class="col-sm-offset-1 col-sm-10">
     	@if(session()->has('ok'))
 			<div class="alert alert-success alert-dismissible">{!! session('ok') !!}</div>
 		@endif
     <!-- Zone de recherche dans la collection -->
-    <div id="research-box" class="panel panel-primary">
-			<div class="panel-heading">
-				<h3 class="panel-title"><a href=""><span class="glyphicon glyphicon-menu-down"></span></a> Rechercher un jeu dans ma collection</h3><!-- A FAIRE : ajouter ici un petit triangle blanche qui deroule le form en dessus quand on clique. -->
-			</div>
-      <div class="panel-body">
-
+      <div id="research-box" class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title"><a href=""><span class="glyphicon glyphicon-menu-down"></span></a> Rechercher un jeu dans ma collection</h3><!-- A FAIRE : ajouter ici un petit triangle blanche qui deroule le form en dessus quand on clique. -->
+        </div>
+        <div class="panel-body">
+        </div>
       </div>
-    </div>
+
 
     <!-- Table liste des jeux : consultation et ajout-->
 		<div id="view-box" class="panel panel-primary">
