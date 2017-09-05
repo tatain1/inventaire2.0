@@ -90,7 +90,25 @@
 
                 <h1>Comment ça marche ?</h1>
                 <p>Si c'est votre premiere visite, commencez par vous enregistrer (en haut à droite !)</p>
-                
+
+                <h1>Mais c'est moche, plein de bug et on peut pas faire grand chose !!!</h1>
+                <p>
+                Oui, effectivement, mais je bosse activement à améliorer le bouzin ! Alors effectivement, pour l'instant, y'a des bugs d'affichage,
+                des traductions pas faites, une interface horrible et un manque de contenu, mais ça va arriver, calmez vous !
+                </p>
+
+                <h1>Et qu'est ce qui va arriver exactement ?</h1>
+                <p> En vrac :<br>
+                <ul>
+                  <li>Ajout du support de plein de plate-formes (Sony, Microsoft)</li>
+                  <li>Ajout du support des non-jeux (Amiibo, Infinity, Goddies, Librairie...)</li>
+                  <li>Possiblité de créer sa wishlist</li>
+                  <li>Possibilité de créer une liste de doublons/echange</li>
+                  <li>Possilité de consulter la collection des autres memebres (sauf si ceux-ci ne le souhaite pas...)</li>
+                  <li>Et j'ai plein d'autres idées (mais chaque chose en son temps !!!)</li>
+                </ul>
+              </p>
+
             </div>
         </div>
     </body>
