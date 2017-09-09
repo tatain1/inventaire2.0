@@ -35,16 +35,29 @@
   				<tbody>
   					@foreach ($games as $game)
   						<tr>
-  							<td class="text-primary"><strong>{!! link_to_route('game.show', $game->name, [$game->id]) !!}</strong></td>
+                <td class="text-primary"><strong>{!! link_to_route('game.show', $game->name, [$game->id]) !!}</strong></td>
                 <td>{!! $game->console !!}</td>
-  							<td>{!! link_to_route('game.show', 'Voir', [$game->id], ['class' => 'btn btn-success btn-block']) !!}</td>
-  							<td>{!! link_to_route('game.edit', 'Modifier', [$game->id], ['class' => 'btn btn-warning btn-block']) !!}</td>
-  							<td>
-  								{!! Form::open(['method' => 'DELETE', 'route' => ['game.destroy', $game->id]]) !!}
-  									{!! Form::submit('Supprimer', ['class' => 'btn btn-danger btn-block', 'onclick' => 'return confirm(\'Vraiment supprimer ce jeu ?\')']) !!}
-  								{!! Form::close() !!}
-  							</td>
-  						</tr>
+                <td>
+                  <!-- Right Side Of Navbar -->
+                  <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <span class="glyphicon glyphicon-cog"></span><span class="caret"></span>
+                      </a>
+
+                      <ul class="dropdown-menu" role="menu">
+                        <li>{!! link_to_route('game.show', 'Détails', [$game->id]) !!}</li>
+                        <li>{!! link_to_route('game.edit', 'Modifier', [$game->id]) !!}</li>
+                        <!-- <li>{!! link_to_route('game.destroy', 'Supprimer', [$game->id]) !!}</li> -->
+                        <li>{!! Form::open(['method' => 'DELETE', 'route' => ['game.destroy', $game->id]]) !!}
+        									  {!! Form::submit('Supprimer', array('class'=>'noClass', 'onclick' => 'return confirm(\'Vraiment supprimer ce jeu ?\')')) !!}
+        						        {!! Form::close() !!}</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+
   					@endforeach
   	  			</tbody>
   			</table>

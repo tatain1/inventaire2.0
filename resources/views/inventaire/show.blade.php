@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="col-lg-offset-4 col-lg-4 col-sm-offset-3 col-sm-6">
+    <div class="col-lg-offset-4 col-lg-4 col-sm-offset-1 col-sm-10">
     	<br>
 		<div class="panel panel-primary">
 			<div class="panel-heading">Fiche du jeu</div>
