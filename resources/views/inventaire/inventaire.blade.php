@@ -6,6 +6,7 @@
     	@if(session()->has('ok'))
 			<div class="alert alert-success alert-dismissible">{!! session('ok') !!}</div>
 		@endif
+
     <!-- Zone de recherche dans la collection -->
       <div id="research-box" class="panel panel-primary">
         <div class="panel-heading">
@@ -22,48 +23,51 @@
 				<h3 class="panel-title">Liste des jeux</h3>
 			</div>
       <div class="panel-body">
-  			<table class="table">
-  				<thead>
-  					<tr>
-  						<th>Nom</th>
-              <th>Plateforme</th>
-  						<th></th>
-  						<th></th>
-  						<th></th>
-  					</tr>
-  				</thead>
-  				<tbody>
-  					@foreach ($games as $game)
-  						<tr>
-                <td class="text-primary"><strong>{!! link_to_route('game.show', $game->name, [$game->id]) !!}</strong></td>
-                <td>{!! $game->console !!}</td>
-                <td>
-                  <!-- Right Side Of Navbar -->
-                  <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        <span class="glyphicon glyphicon-cog"></span><span class="caret"></span>
-                      </a>
+        <div class="container-fuid">
+          <div class="row">
+            <div class="col-xs-4">
+              Nom
+            </div>
+            <div class="col-xs-4">
+              Plateforme
+            </div>
+            <div class="col-xs-4">
+              Action
+            </div>
+          </div>
+          @foreach ($games as $game)
+          <div class="row">
+            <div class="col-xs-4">
+              {!! link_to_route('game.show', $game->name, [$game->id]) !!}
+            </div>
 
-                      <ul class="dropdown-menu" role="menu">
-                        <li>{!! link_to_route('game.show', 'Détails', [$game->id]) !!}</li>
-                        <li>{!! link_to_route('game.edit', 'Modifier', [$game->id]) !!}</li>
-                        <!-- <li>{!! link_to_route('game.destroy', 'Supprimer', [$game->id]) !!}</li> -->
-                        <li>{!! Form::open(['method' => 'DELETE', 'route' => ['game.destroy', $game->id]]) !!}
-        									  {!! Form::submit('Supprimer', array('class'=>'noClass', 'onclick' => 'return confirm(\'Vraiment supprimer ce jeu ?\')')) !!}
-        						        {!! Form::close() !!}</li>
-                      </ul>
-                    </li>
+            <div class="col-xs-4">
+              {!! $game->console !!}
+            </div>
+            <div class="col-xs-4">
+              <!-- Right Side Of Navbar -->
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <span class="glyphicon glyphicon-cog"></span><span class="caret"></span>
+                  </a>
+
+                  <ul class="dropdown-menu" role="menu">
+                    <li>{!! link_to_route('game.show', 'Détails', [$game->id]) !!}</li>
+                    <li>{!! link_to_route('game.edit', 'Modifier', [$game->id]) !!}</li>
+                    <li>{!! Form::open(['method' => 'DELETE', 'route' => ['game.destroy', $game->id]]) !!}
+                        {!! Form::submit('Supprimer', array('class'=>'noClass', 'onclick' => 'return confirm(\'Vraiment supprimer ce jeu ?\')')) !!}
+                        {!! Form::close() !!}</li>
                   </ul>
-                </td>
-              </tr>
-
-  					@endforeach
-  	  			</tbody>
-  			</table>
+                </li>
+              </ul>
+            </div>
+          </div>
+          @endforeach
+        </div>
       </div>
 		</div>
 		{!! link_to_route('game.create', 'Ajouter un jeu', [], ['class' => 'btn btn-info pull-right']) !!}
 		{!! $links !!}
-	</div>
+</div>
 @stop
