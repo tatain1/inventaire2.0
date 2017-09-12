@@ -34,7 +34,7 @@ class GameRepository
 	public function getPaginate($n)
 	{
 		return $this->game->with('user')
-        ->orderBy('created_at', 'desc')
+        ->orderBy('name', 'asc')
         ->paginate($n);
 	}
 

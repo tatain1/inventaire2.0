@@ -15,6 +15,7 @@ Route::get('/', function () { return view('welcome'); });
 
 // Route pour l'inventaire
 Route::resource('/game', 'GameController');
+Route::get('/game/{id}/delete', 'GameController@destroy')->middleware('admin');
 
 // Routes pour l'authentification
 Auth::routes();

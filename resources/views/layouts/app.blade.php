@@ -24,7 +24,7 @@
         ]) !!};
     </script>
 </head>
-<body>
+<body  ng-app>
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
